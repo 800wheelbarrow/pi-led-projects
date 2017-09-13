@@ -2,6 +2,7 @@ import pyowm
 import unicornhat as uh
 import time
 import sys
+from modules import owmapikey
 
 id = int(input('City ID: '))
 #for arg in sys.argv[1:]:
@@ -10,7 +11,7 @@ id = int(input('City ID: '))
 uh.set_layout(uh.PHAT)
 uh.brightness(0.7)
 
-owm = pyowm.OWM('0c4a78aea41f8fdb7565a5ebf3b3fa05')
+owm = pyowm.OWM(owmapikey.strApiKey)
 w = owm.weather_at_id(id)
 wd = w.get_weather()
 tempF = wd.get_temperature('fahrenheit')['temp']
