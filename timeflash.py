@@ -6,7 +6,9 @@ uh.brightness(0.5)
 
 fulltime = time.localtime()
 hour = int(time.strftime("%I"))
-minute = int(time.strftime("%M"))
+minute = time.strftime("%M")
+minleft = int(minute[0])
+minright = int(minute[-1])
 
 def flashHour():
 
@@ -20,9 +22,9 @@ def flashHour():
 		uh.show()
 		time.sleep(0.5)
 
-def flashMin():
+def flashMinLeft():
 
-        for h in range(0, minute):
+        for h in range(0, minleft):
                 for x in range(8):
                         for y in range(4):
                                 uh.set_pixel(x, y, 255, 0, 0)
@@ -32,28 +34,19 @@ def flashMin():
                 uh.show()
                 time.sleep(0.5)
 
-def flashMinQ():
+def flashMinRight():
 
-	if minute <= 15:
-		minflash = 1
-	elif minute <= 30:
-		minflash = 2
-	elif minute <= 45:
-        	minflash = 3
-	else:
-        	minflash = 4
-
-        for h in range(0, minflash):
+       for h in range(0, minright):
                 for x in range(8):
                         for y in range(4):
-                                uh.set_pixel(x, y, 255, 0, 0)
+                                uh.set_pixel(x, y, 0, 255, 0)
                 uh.show()
-                time.sleep(1)
+                time.sleep(0.5)
                 uh.clear()
                 uh.show()
-                time.sleep(1)
-
+                time.sleep(0.5)
 
 if __name__ == '__main__':
 	flashHour()
-	flashMin()
+	flashMinLeft()
+	flashMinRight()
