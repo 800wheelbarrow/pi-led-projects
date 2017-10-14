@@ -1,0 +1,8 @@
+[Unit]
+Description=Start Flask server
+
+[Service]
+ExecStart=/usr/bin/startflask
+
+[Install]
+WantedBy=multi-user.target
