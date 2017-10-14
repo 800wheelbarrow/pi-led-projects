@@ -46,7 +46,10 @@ def flashMinRight():
                 uh.show()
                 time.sleep(0.5)
 
+def flashAll():
+        flashHour()
+        flashMinLeft()
+        flashMinRight()
+
 if __name__ == '__main__':
-	flashHour()
-	flashMinLeft()
-	flashMinRight()
+	flashAll()
