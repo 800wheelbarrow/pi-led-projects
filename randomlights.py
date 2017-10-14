@@ -16,6 +16,7 @@ def randomLights():
 	uh.show()
 	time.sleep(5)
 	uh.clear()
+	uh.show()
 
 if __name__ == '__main__':
         randomLights()
