@@ -4,4 +4,4 @@ Files should go here:
 
 * /etc/systemd/system/startflask.service
 
-Then run `service startflask start` or reboot the machine. (that's how this is all supposed to work, anyway)
+Then enable auto start with `systemctl enable startflask` then run `service startflask start` or reboot the machine. (that's how this is all supposed to work, anyway)
