@@ -2,7 +2,7 @@
 Description=Start Flask server
 
 [Service]
-ExecStart=/usr/bin/startflask
+ExecStart=/usr/bin/flask
 
 [Install]
 WantedBy=multi-user.target
