@@ -8,6 +8,8 @@ Notes:
   *Weather script needs API key (in separate file) which isn't synced.
 
   *All scripts have to be run with sudo.
+  
+  *Install httplib2 (sudo apt install python-httplib2)
 
   *Web server runs with [Flask](http://flask.pocoo.org/docs/0.12/installation/#installation) (install it with sudo). To run the server (and yes, it has to be run as root):
 ```
