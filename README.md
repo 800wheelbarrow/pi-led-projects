@@ -4,6 +4,8 @@ Python scripts to control Pi Zero LED array
 Notes:
 
   *Email checker needs Google json credentials which aren't synced.
+  https://developers.google.com/workspace/guides/create-credentials
+  Copy the file to /root/.credentials/gmail-unread.json
 
   *Weather script needs API key (in separate file) which isn't synced.
 
